@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body .nav{
+    background-color: black;
+}
+
+nav.navbar.bg-body-tertiary{
+   color: #666;
+}
+
+body .navbar.bg-body-tertiary {
+    background-color: black; /* Replace with your desired background color */
+    padding: 10px 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.navbar.bg-body-tertiary .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.bg-body-tertiary .navbar-brand {
+    color: grey; 
+    font-weight: bold;
+}
+
+.navbar.bg-body-tertiary form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar.bg-body-tertiary .form-control {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: grey; /* Replace with your desired input background color */
+    color: #fff; /* Replace with your desired input text color */
+}
+
+.navbar.bg-body-tertiary .btn-outline-success {
+    border-color: grey; /* Replace with your desired button border color */
+    color: black; /* Replace with your desired button text color */
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px; /* Add margin for spacing */
+}
+
+
+.logo {
+    width: 120px;
+    height: 120px; /* Set the height equal to the width to make it a perfect circle */
+    position: absolute;
+    top: 5px;
+    left: 10%;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50%; /* Make it round by setting border-radius to 50% */
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 100%;
+    right: 1%;
+    top: 30px;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent; /* Transparent background */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.8); /* Transparent background for dropdown */
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+}
+
+.navbar ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar ul li ul li {
+    background: none;
+    margin-bottom: 10px; 
+}
+
+.navbar ul li ul li a {
+    padding: 10px 20px;
+}
+
+.navbar ul li ul li:hover {
+    background: #666;
+}
+
+
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 90px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 80px;
+    transition: 0.5s;
+}
+
+
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.content p {
+    margin: 20px auto;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+.post {
+    text-align: center;
+}
+
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+    cursor: pointer;
+    font-size: 24px; /* Adjust the size as needed */
+    padding: 10px;
+  }
+  
+  @media screen and (max-width: 770px) {
+    /* Show the menu icon and hide the navigation menu by default on mobile */
+    .menu-icon {
+      display: block;
+      color: #009688;
+    }
+  
+    .Navbar ul {
+      display: none;
+    }
+  
+    /* Style the navigation menu when it's visible */
+    .Navbar ul.show-menu {
+      display: block;
+      /* Add your mobile menu styles here */
+    }
+
+    .content{
+        bottom: 50%;
+    }
+  }
+
+
+#feature {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 20px;
+    color: #009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.title-text p::after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587, #fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+
+.title-text h1 {
+    font-size: 50px;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #009688;
+}
+
+.features-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+    border: 1px solid #009688;
+}
+
+.feature-text p{
+    padding: 0 20px;
+    text-align: initial;
+}
+@media screen and (max-width: 770px) {
+    .title-text h1 {
+        font-size: 50px;
+    }
+    .features {
+        flex-basis: 50%;
+    }
+    .features-img {
+        flex-basis: 50%;
+        margin: auto;
+    }
+    .features-img img {
+        width: 70%;
+        border-radius: 10px;
+    }
+}
+#service {
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+.service-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-service {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-service img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+    opacity: 0;
+    transition: 1s;
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+}
+
+.service-desc {
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 100%;
+}
+
+.service-desc p {
+    font-size: 14px;
+}
+
+.single-service:hover .service-desc {
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px) {
+    .single-service {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    } 
+.service-desc p{
+    font-size: 12px;
+}
+hr{
+    margin: 5px auto;
+}
+.single-service:hover.service-desc{
+    bottom: 25% !important;
+    opacity: 1;
+}
+}
+
+#testimonial{
+    width: 100%;
+    padding: 70px 0;
+}
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonial-col{
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #00968814;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.testimonial-col p{
+    font-size: 14px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.user-info .fa{
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+}
+.user-info small{
+    color: #009688;
+}
+.testimonial-col:hover:hover{
+    transform: translateY(-7px);
+}
+
+@media screen and (max-width: 770px){
+    .testimonal.col{
+        flex-basis: 100%;
+    }
+}
+
+#footer {
+    padding: 100px 0 20px;
+    background: rgb(27, 25, 25);
+    position: relative;
+    text-align: center; /* Added text-align to center align the content */
+}
+
+.footer-row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right h1{
+    color: #009688;
+}
+
+.footer-left {
+ text-align: left;
+}
+
+.footer-left h1{
+    color: #009688;
+}
+
+.footer-row h1 {
+    margin: 10px 0;
+}
+
+.footer-row p {
+    line-height: 35px;
+    color: white; /* Added text color */
+}
+
+.footer-right .footer-left,
+.footer-left .footer-right {
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+.footer-img {
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px; /* Added margin-top to adjust spacing */
+}
+
+.social-links a {
+    display: inline-block; /* Display the social icons inline */
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid;
+    margin: 5px; /* Adjust the margin for spacing between icons */
+    color: #009688;
+    cursor: pointer;
+    transition: .5s;
+    text-align: center; /* Center-align social icons */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.social-links a:hover {
+    background: #009688;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+#footertext {
+    color: white;
+}
+
+@media screen and (max-width: 770px){
+    .footer-left,.footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .footer-img{
+        top: 25%;
+    }
+} 
+ 
+.textcolor {
+    color: black;
+}
+
+.submenu {
+    position: fixed;
+}
+
+@media screen and (max-width: 770px) {
+    /* Adjust font sizes, margins, and paddings for smaller screens */
+    .title-text h1 {
+        font-size: 30px; /* Adjust as needed */
+    }
+    
+    .features h1 {
+        font-size: 24px; /* Adjust as needed */
+    }
+    
+    .service-desc p {
+        font-size: 12px; /* Adjust as needed */
+    }
+    
+    /* Change layout for mobile */
+    .features {
+        flex-basis: 100%;
+    }
+    
+    .features-img {
+        flex-basis: 100%;
+    }
+    
+    /* Hide or show elements for mobile */
+    .navbar ul li ul li {
+        margin-bottom: 10px; 
+    }
+    
+    /* Adjust widths and heights */
+    .features-img img {
+        width: 100%; /* Adjust as needed */
+    }
+    
+    /* Additional mobile styles */
+    .footer-left, .footer-right {
+        flex-basis: 100%;
+        font-size: 14px; /* Adjust as needed */
+    }
+    
+    .footer-img {
+        top: 25%;
+    }
+    
+    /* Add or modify styles for the news section on mobile */
+    #news {
+        padding: 20px 0; /* Adjust as needed */
+    }
+    
+}
+
+#news {
+    background:	#C0C0C0;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* You can adjust the scale factor as needed */
+}
+
+.card {
+    width: 100%; /* Adjust the width of the card as needed */
+    max-width: 400px; /* Set a maximum width for the card */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+  .card img {
+    max-width: 100%; /* Ensure the image doesn't exceed the card's width */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+
+
+
+
+  
